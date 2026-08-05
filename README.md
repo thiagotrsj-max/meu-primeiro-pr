@@ -4,7 +4,7 @@ Este repositório foi criado para praticar o fluxo de contribuição com Git e G
 
 ## Sobre
 
-Este é um repositório de aprendizado, cirado com a ajuda do Claude Code.
+Este é um repositório de aprendizado, criado com a ajuda do Claude Code.
 
 ## Como contribuir
 
