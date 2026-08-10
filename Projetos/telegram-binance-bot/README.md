@@ -65,7 +65,13 @@ main.py                     -> orquestra o fluxo acima
    Preencha os valores. Mantenha `BINANCE_TESTNET=true` e `DRY_RUN=true`
    no início.
 
-6. **Rode**:
+6. **Confira o `.env`** (opcional, mas recomendado — nunca mostra valores
+   sensíveis, só diz o que está preenchido ou não):
+   ```bash
+   python check_env.py
+   ```
+
+7. **Rode**:
    ```bash
    python main.py
    ```
@@ -110,10 +116,6 @@ Todos os parâmetros ficam no `.env`:
   "Signal Tracker Club" (rótulos em português: Moeda, Tipo, Alavancagem,
   Zona de Entrada, Stop Loss, Alvos T1-T5). Se o formato mudar, ajuste os
   regex em `signal_parser.py`.
-- `quantity` é arredondada para 3 casas decimais de forma genérica — cada
-  par na Binance tem seu próprio `stepSize`/`tickSize`; para produção,
-  vale consultar `futures_exchange_info()` e arredondar corretamente por
-  símbolo antes de enviar a ordem.
 - Contagem de posições abertas em modo dry-run é sempre 0; em modo real,
   consulta a Binance diretamente (não depende só do log local).
 - Não há reconciliação automática de posições fechadas manualmente por

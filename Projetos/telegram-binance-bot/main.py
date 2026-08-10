@@ -10,6 +10,11 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import sys
+
+# Windows costuma abrir o console em cp1252, que não tem alguns emoji -> força UTF-8.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 import binance_executor
 import risk_manager
