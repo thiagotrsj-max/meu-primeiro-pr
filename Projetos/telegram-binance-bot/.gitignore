@@ -1,0 +1,12 @@
+# Segredos - NUNCA commitar
+.env
+*.session
+*.session-journal
+
+# Dados locais / logs
+logs/*.log
+signals.db
+__pycache__/
+*.pyc
+.venv/
+venv/
